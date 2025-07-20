@@ -1,0 +1,153 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #0c3c60;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  height: 50px;
+  margin-right: 15px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #1f4e78;
+  color: white;
+  min-height: 100%;
+  padding: 20px 15px;
+  position: fixed;
+  top: 80px;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.sidebar nav ul li {
+  margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  background-color: #2e6da4;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: #1c598c;
+}
+
+.sidebar nav ul li a.disabled {
+  background-color: #808080;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.sidebar nav ul li a.active {
+  background-color: #003366;
+  font-weight: bold;
+}
+
+.logout-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #d9534f;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+.logout-button:hover {
+  background-color: #c9302c;
+}
+
+
+/* Main Content */
+main {
+  margin-left: 240px;
+  padding: 30px;
+  flex: 1;
+}
+
+main h1 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+main p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background-color: #0c3c60;
+  color: white;
+  text-align: center;
+  padding: 12px 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    top: 0;
+  }
+
+  main {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
